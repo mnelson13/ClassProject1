@@ -1,4 +1,31 @@
 
+#b1{
+    background-color:blue;
+    height: 500px;
+}
+
+
+#mainContent{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    align-content: center;
+}
+#resultcard{
+    width: 100%;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 5px;
+}
+test2{
+    width: 100%;
+}
+#test{
+    width:200px;
+    height:200px;
+}
 .NM1{
     background-image: url("http://misuzalee.files.wordpress.com/2011/10/goldengate11.jpg");
     background-size: 100%;
