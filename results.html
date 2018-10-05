@@ -16,7 +16,7 @@
 
 <body>
 
-    <nav>
+    <!-- <nav>
         <div class="nav-wrapper">
             <a href="" class="brand-logo">Taurus Express</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -25,72 +25,85 @@
                 <li><a href="">Weather</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+
+    <nav>
+        <div class="nav-wrapper">
+          <form>
+            <div class="input-field">
+              <input placeholder="Tourist Express Search" id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
    
     <div id="mainContent">
-    <div class="row">
-        <div id="b1" class="col l12">
-            <!-- Note that "m4 l3" was added -->
-            
+        <div class="row">
+            <div id="b1" class="col l12">
+                <!-- Note that "m4 l3" was added -->
             
                 <div id="resultcard" class="card horizontal">
                     <div class="row">
                         <div class="col s4">
                      
-                        <img id="test" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/eiffel-tower-paris-p.jpg?imwidth=480">
+                            <img id="test" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/eiffel-tower-paris-p.jpg?imwidth=480">
                     
                         </div>
 
                         <div class="col s6">
-                    <div class="card-stacked">
-                            <span class="card-title"><a href="#">Point of Interest</a></span>
-                            <h5 id="location">location</h5>
+                            <div class="card-stacked">
+                                <span class="card-title"><a href="#">Point of Interest</a></span>
+                                <h5 id="location">location</h5>
                         
-                            <p>I am a very simple card. I am good at containing small bits of information.</p>
+                                <p>I am a very simple card. I am good at containing small bits of information.</p>
                         
-                    </div>
-                </div>
-                    <div class="col s2">
-                    <div class="card blue-grey darken-1">
-                            <div class="card-content white-text">
-                              <span class="card-title"><a href="#">Location</a></span>
-                              <p>weather</p>
+                            </div>
+                        </div>
+                        <div class="col s2">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title"><a href="#">Location</a></span>
+                                    <p>weather</p>
+                                </div>
                             </div>
                             <div class="card-action">
                               
-                              <a href="#">This is a link</a>
+                                <a href="#">This is a link</a>
                             </div>
-                          </div>
                         </div>
+                    </div>
 
                 </div>
             </div>
             
-            </div>
-
         </div>
+
+    </div>
+
+
+    <div id="mainDiv">
+
+
+    </div>
 
         
         <div class="row">
-                <form class="col s12">
-                  <div class="row">
+            <form class="col s12">
+                <div class="row">
                     <div class="input-field col s12">
-                      <textarea id="input" class="materialize-textarea"></textarea>
-                      <label for="textarea1">Textarea</label>
+                        <textarea id="input" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Textarea</label>
                     </div>
-                  </div>
-                </form>
-                <button id="button" class="btn waves-effect waves-light" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                      </button>
-              </div>
-
+                </div>
+            </form>
+            <button id="button" class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
         </div>
-              
+
         
-
-
-
 
 
 
@@ -102,6 +115,6 @@
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             
-    </body>
+</body>
 
 </html>
