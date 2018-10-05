@@ -44,7 +44,7 @@ $(document).ready(function(){
                         weatherDiv.append('<p>Temp: ' + F + ' F<p>')
 
                         weatherDiv.append('<p>Humidity: ' + response.main.humidity + '<p>')
-                        weatherDiv.append('<p>Wind Speed: ' + response.windweatherDiv)
+                        weatherDiv.append('<p>Wind Speed: ' + response.wind.speed)
                         weatherDiv.append('<a href="https://openweathermap.org/city/' + response.id + '" target="_blank">Click here for exteded forecast</a>')
 
                         resultDiv.append(weatherDiv);
