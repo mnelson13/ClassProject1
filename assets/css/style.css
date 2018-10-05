@@ -1,3 +1,48 @@
+
+.NM1{
+    background-image: url("http://misuzalee.files.wordpress.com/2011/10/goldengate11.jpg");
+    background-size: 100%;
+}
+
+.Asia1{
+    background-image: url("http://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/shared/teasersL/teaser_auto_gen/10-hotels-klcc-cheap/teaserMultiLarge/imageHilight/teaser.jpeg.jpg");
+    background-size:100%;
+
+}
+
+.SM1{
+    background-image: url("https://i.ytimg.com/vi/WYJSaUGpnG0/maxresdefault.jpg");
+    background-size: 100%;
+    
+    
+
+}
+
+.EUR1{
+    background-image: url("https://i.huffpost.com/gen/1878792/thumbs/o-BUDAPEST-900.jpg?1");
+    background-size: 100%;
+
+}
+
+.Africa1{
+    background-image: url("https://i.ytimg.com/vi/uUboc_WDZhc/maxresdefault.jpg");
+    background-size: 100%;
+
+}
+
+.white-text{
+    color: black;
+}
+
+.btn {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: rgb(245, 120, 120); 
+    color: white;
+}
 .results {
     border: black solid 5px;
     margin: 10px;

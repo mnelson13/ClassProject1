@@ -1,4 +1,31 @@
+
+
+
 $(document).ready(function(){
+
+    //CAROUSEL
+    var carousel = $(".carousel")
+    console.log(carousel);
+
+    if (carousel.length >0) {
+      carousel.carousel(
+      {
+        dist: 0,
+        padding: 0,
+        fullWidth: true,
+        indicators: true,
+        duration: 100,
+      }
+      );
+    
+    autoplay()   
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
+}
+
+
 
     var searchResult;
     let APIKeyWeather = "df51c21d9a4ddc2a75c5f87f7600ed95";
