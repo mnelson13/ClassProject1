@@ -43,3 +43,11 @@
     background-color: rgb(245, 120, 120); 
     color: white;
 }
+.results {
+    border: black solid 5px;
+    margin: 10px;
+}
+
+img {
+    float: left;
+}
