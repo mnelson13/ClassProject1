@@ -1,7 +1,7 @@
 
 #b1{
     background-color:blue;
-    height: 500px;
+    /* height: 500px; */
 }
 
 
@@ -11,7 +11,7 @@
     width: 90%;
     align-content: center;
 }
-#resultcard{
+.resultcard{
     width: 100%;
     align-content: center;
     margin-left: auto;
@@ -22,9 +22,13 @@
 test2{
     width: 100%;
 }
-#test{
+.test {
     width:200px;
     height:200px;
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .NM1{
     background-image: url("http://misuzalee.files.wordpress.com/2011/10/goldengate11.jpg");
@@ -70,11 +74,5 @@ test2{
     background-color: rgb(245, 120, 120); 
     color: white;
 }
-.results {
-    border: black solid 5px;
-    margin: 10px;
-}
 
-img {
-    float: left;
-}
+
