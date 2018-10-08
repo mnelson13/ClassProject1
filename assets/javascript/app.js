@@ -1,41 +1,19 @@
-
-
-
 $(document).ready(function(){
-
-    //CAROUSEL
-    var carousel = $(".carousel")
-    console.log(carousel);
-
-    if (carousel.length >0) {
-      carousel.carousel(
-      {
-        dist: 0,
-        padding: 0,
-        fullWidth: true,
-        indicators: true,
-        duration: 100,
-      }
-      );
     
-    autoplay()   
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
-    }
-}
 
+    $("#loadMore").hide();
 
-
-    var searchResult;
+    var offset = 0;
+    var searchValue;
     let APIKeyWeather = "df51c21d9a4ddc2a75c5f87f7600ed95";
     let apikeySygic = "KpeNRgekRLJeDOc0Yg1D91Gv5VK3EnU3EqRxSykg";
 
-    $("#search").on("click", function(){
+
+    function showResults(searchValue) {
         event.preventDefault();
-        searchResult = $("#search").val();
-        let queryURL = "https://api.sygictravelapi.com/1.1/en/places/list?query="+searchResult+"&level=poi&limit=10&categories_not=traveling";
-        console.log(searchResult);
+        $("#loadMore").show();
+        let queryURL = "https://api.sygictravelapi.com/1.1/en/places/list?query="+searchValue+"&level=poi&limit=10&categories_not=traveling&offset=" + offset + "";
+        console.log(searchValue);
         $.ajax({
             url: queryURL,
             method: "GET",
@@ -73,6 +51,8 @@ $(document).ready(function(){
                         weatherDiv.append('<p>Humidity: ' + response.main.humidity + '<p>')
                         // weatherDiv.append('<p>Wind Speed: ' + response.wind.speed)
                         weatherDiv.append('<a href="https://openweathermap.org/city/' + response.id + '" target="_blank">Click here for extended forecast</a>')
+                        // weatherDiv.append('<p>lat: ' + response.coord.lat + '<p>')
+                        // weatherDiv.append('<p>lon: ' + response.coord.lon + '<p>')
 
                         resultDiv.append(weatherDiv);
 
@@ -104,17 +84,53 @@ $(document).ready(function(){
                     if (result.url !== null) {
                         travelDiv.append('<a href="' + result.url + '" target="_blank">Click here for more information</a>')
                     };
+
+                    // if (result.location.lat !== null) {
+                    //     travelDiv.append('<p>lat: ' + result.location.lat + '</p>');
+                    // };
+
+                    // if (result.location.lng !== null) {
+                    //     travelDiv.append('<p>lon: ' + result.location.lng + '</p>');
+                    // };
                     
                     resultDiv.prepend(travelDiv);
                     resultDiv.prepend(imgDiv);
 
                     $("#b1").append(resultDiv);
+
+                    $("#searchResults").val('');
                     
 
                 }
             )
 
         })
+
+        localStorage.clear();
+    }
+
+    $("#searchResults").keypress(function(e){
+        $("#b1").empty();
+        offset = 0;
+        searchValue = $("#searchResults").val();
+        var key = e.which;
+        if (key === 13) {
+            showResults(searchValue);
+        }
+
+    })
+
+    if (localStorage.getItem("searchValue")) {
+        console.log(localStorage.getItem("searchValue"));
+        $("#b1").empty();
+        searchValue = localStorage.getItem("searchValue");
+        showResults(searchValue);
+        
+    }
+
+    $("#loadMore").on("click", function(){
+        offset += 10;
+        showResults(searchValue);
     })
 
 
