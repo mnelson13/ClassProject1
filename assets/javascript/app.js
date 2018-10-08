@@ -7,6 +7,10 @@ $(document).ready(function(){
     var searchValue;
     let APIKeyWeather = "df51c21d9a4ddc2a75c5f87f7600ed95";
     let apikeySygic = "KpeNRgekRLJeDOc0Yg1D91Gv5VK3EnU3EqRxSykg";
+    let favorites = []
+    if (localStorage.getItem("favorites")) {
+        favorites.push(localStorage.getItem("favorites"));
+    };
 
 
     function showResults(searchValue) {
@@ -69,6 +73,8 @@ $(document).ready(function(){
                         imgDiv.append('<img class="test" src="assets/images/sorry-image-not-available.jpg" />')
                     };
 
+                    imgDiv.append('<i data-id=' + result.id + ' class="material-icons notSelected">favorite_border</i>');
+
                     if (result.original_name !== null) {
                         travelDiv.append('<h3 class="card-title">'+ result.original_name + '</h3>');
                     };
@@ -106,7 +112,7 @@ $(document).ready(function(){
 
         })
 
-        localStorage.clear();
+        localStorage.setItem("searchValue", "");
     }
 
     $("#searchResults").keypress(function(e){
@@ -132,6 +138,19 @@ $(document).ready(function(){
         offset += 10;
         showResults(searchValue);
     })
+
+    $(document.body).on("click", ".notSelected", function(){
+        $(this).text("favorite");
+        $(this).removeClass("notSelected");
+        $(this).addClass("selected");
+        favorites.push($(this).attr("data-id"));
+        let favoritesString = JSON.stringify(favorites)
+        localStorage.setItem("favorites", favoritesString);
+
+        console.log(favorites);
+        
+    });
+
 
 
 })
