@@ -4,16 +4,11 @@
     }
 
 
-#b1{
-
-    
-
-}
-
-
 .nav-wrapper{
     float: right;
-    width: 70%;
+    width: 75%;
+    position: fixed;
+  
     
 }
 .nav-wrapper2{
@@ -31,6 +26,13 @@
     
 }
 
+.nav-wrapper2{
+    position: fixed;
+}
+
+
+
+
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: RoyalBlue;
@@ -40,7 +42,7 @@
 #mainContent{
     margin-left: auto;
     margin-right: auto;
-    
+    width: 100%;
     align-content: center;
     
 }
@@ -54,9 +56,11 @@
     
     background-color: whitesmoke;
 }
+
 test2{
     width: 100%;
 }
+
 .test {
     width:200px;
     height:200px;
