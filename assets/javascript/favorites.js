@@ -64,9 +64,9 @@ $(document).ready(function(){
             imgDiv.attr("class", "col s3")
 
             if (result.thumbnail_url !== null) {
-                imgDiv.append('<img class="test" src="' + result.thumbnail_url + '" />')
+                imgDiv.append('<img class="test responsive-img" src="' + result.thumbnail_url + '" />')
             } else if (result.thumbnail_url === null) {
-                imgDiv.append('<img class="test" src="assets/images/sorry-image-not-available.jpg" />')
+                imgDiv.append('<img class="test responsive-img" src="assets/images/sorry-image-not-available.jpg" />')
             };
 
             if (favorites.indexOf(result.id) === -1) {
@@ -131,5 +131,17 @@ $(document).ready(function(){
         // console.log(favorites);
         
     });
+
+    $("#searchResults").keypress(function (e) {
+        searchValue = $("#searchResults").val();
+        // localStorage.clear();
+        localStorage.setItem("searchValue", searchValue);
+        var key = e.which;
+        if (key === 13) {
+            window.open("results.html");
+
+
+        }
+    })
 
 });
