@@ -67,6 +67,7 @@ $(document).ready(function(){
                     travelDiv.attr("class", "col s6 card-stacked");
                     let imgDiv = $("<div>");
                     imgDiv.attr("class", "col s3")
+                    
 
                     if (result.thumbnail_url !== null) {
                         imgDiv.append('<img class="test responsive-img" src="' + result.thumbnail_url + '" />')
