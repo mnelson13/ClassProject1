@@ -2,12 +2,17 @@ $(document).ready(function(){
 
     let APIKeyWeather = "df51c21d9a4ddc2a75c5f87f7600ed95";
     let apikeySygic = "KpeNRgekRLJeDOc0Yg1D91Gv5VK3EnU3EqRxSykg";
-    let favorites = [localStorage.getItem("favorites")];
-    let favoritesArray = JSON.parse(favorites);
+    // let favorites = [localStorage.getItem("favorites")];
+    // let favoritesArray = JSON.parse(favorites);
+    let favorites = []
+    if (localStorage.getItem("favorites")) {
+        favorites.push(localStorage.getItem("favorites"));
+         favorites = JSON.parse(favorites);
+    };
 
 
-    for (i in favoritesArray) {
-        let queryURL = "https://api.sygictravelapi.com/1.1/en/places/" + favoritesArray[i] + "";
+    for (i in favorites) {
+        let queryURL = "https://api.sygictravelapi.com/1.1/en/places/" + favorites[i] + "";
         console.log(queryURL);
 
         $.ajax({
@@ -64,6 +69,12 @@ $(document).ready(function(){
                 imgDiv.append('<img class="test" src="assets/images/sorry-image-not-available.jpg" />')
             };
 
+            if (favorites.indexOf(result.id) === -1) {
+                imgDiv.append('<i data-id=' + result.id + ' class="material-icons notSelected">favorite_border</i>');
+            } else {
+                imgDiv.append('<i data-id=' + result.id + ' class="material-icons selected">favorite</i>');
+            }
+
             if (result.original_name !== null) {
                 travelDiv.append('<h3 class="card-title">'+ result.original_name + '</h3>');
             };
@@ -95,5 +106,30 @@ $(document).ready(function(){
 
         });
     };
+
+    $(document.body).on("click", ".notSelected", function(){
+        $(this).text("favorite");
+        $(this).removeClass("notSelected");
+        $(this).addClass("selected");
+        favorites.unshift($(this).attr("data-id"));
+        let favoritesString = JSON.stringify(favorites)
+        localStorage.setItem("favorites", favoritesString);
+
+        // console.log(favorites);
+        
+    });
+
+    $(document.body).on("click", ".selected", function(){
+        $(this).text("favorite_border");
+        $(this).removeClass("Selected");
+        $(this).addClass("notSelected");
+        let index = favorites.indexOf($(this).attr("data-id"));
+        favorites.splice(index, 1);
+        let favoritesString = JSON.stringify(favorites)
+        localStorage.setItem("favorites", favoritesString);
+
+        // console.log(favorites);
+        
+    });
 
 });
