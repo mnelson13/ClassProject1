@@ -10,9 +10,12 @@
 
 }
 
+
 .nav-wrapper{
     float: right;
-    width: 80%;
+    width: 75%;
+    position: fixed;
+  
 }
 
 .btn {
@@ -26,6 +29,13 @@
     
 }
 
+.nav-wrapper2{
+    position: fixed;
+}
+
+
+
+
 /* Darker background on mouse-over */
 .btn:hover {
     background-color: RoyalBlue;
@@ -35,7 +45,7 @@
 #mainContent{
     margin-left: auto;
     margin-right: auto;
-    
+    width: 100%;
     align-content: center;
 }
 .resultcard{
@@ -46,9 +56,11 @@
     text-align: left;
     padding: 5px;
 }
+
 test2{
     width: 100%;
 }
+
 .test {
     width:200px;
     height:200px;
