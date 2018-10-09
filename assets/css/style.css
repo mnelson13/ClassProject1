@@ -5,14 +5,19 @@
 
 
 #b1{
-   /* background-color:blue;*/
+
     
 
 }
 
+
 .nav-wrapper{
     float: right;
-    width: 80%;
+    width: 70%;
+    
+}
+.nav-wrapper2{
+    position: fixed;
 }
 
 .btn {
@@ -37,6 +42,7 @@
     margin-right: auto;
     
     align-content: center;
+    
 }
 .resultcard{
     width: 100%;
@@ -44,7 +50,9 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
+    
+    background-color: whitesmoke;
 }
 test2{
     width: 100%;
@@ -52,10 +60,14 @@ test2{
 .test {
     width:200px;
     height:200px;
-    margin: 10px;
+    margin: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
+    background: #fd5b39;
+    
+    padding: 5px; 
 }
 .NM1{
     background-image: url("http://misuzalee.files.wordpress.com/2011/10/goldengate11.jpg");
