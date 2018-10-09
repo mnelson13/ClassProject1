@@ -4,18 +4,15 @@
     }
 
 
-#b1{
-   /* background-color:blue;*/
-    
-
-}
-
-
 .nav-wrapper{
     float: right;
     width: 75%;
     position: fixed;
   
+    
+}
+.nav-wrapper2{
+    position: fixed;
 }
 
 .btn {
@@ -47,6 +44,7 @@
     margin-right: auto;
     width: 100%;
     align-content: center;
+    
 }
 .resultcard{
     width: 100%;
@@ -54,7 +52,9 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
+    
+    background-color: whitesmoke;
 }
 
 test2{
@@ -64,40 +64,114 @@ test2{
 .test {
     width:200px;
     height:200px;
-    margin: 10px;
+    margin: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
+    background: #fd5b39;
+    
+    padding: 5px; 
 }
-.NM1{
-    background-image: url("http://misuzalee.files.wordpress.com/2011/10/goldengate11.jpg");
+.NA1{
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
-.Asia1{
-    background-image: url("http://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/shared/teasersL/teaser_auto_gen/10-hotels-klcc-cheap/teaserMultiLarge/imageHilight/teaser.jpeg.jpg");
+.NA2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.NA3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.NA4{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.AS1{
+    background-repeat: no-repeat;
     background-size:100%;
 
 }
-
-.SM1{
-    background-image: url("https://i.ytimg.com/vi/WYJSaUGpnG0/maxresdefault.jpg");
+.AS2{
     background-size: 100%;
-    
-    
-
+    background-repeat: no-repeat;
 }
 
-.EUR1{
-    background-image: url("https://i.huffpost.com/gen/1878792/thumbs/o-BUDAPEST-900.jpg?1");
+.AS3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.AS4{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.SA1{
+    background-repeat: no-repeat;
     background-size: 100%;
 
 }
+.SA2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
-.Africa1{
-    background-image: url("https://i.ytimg.com/vi/uUboc_WDZhc/maxresdefault.jpg");
+.SA3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.SA4{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.EU1{
+    background-repeat: no-repeat;
     background-size: 100%;
 
+}
+.EU2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.EU3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.EU4{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.AF1{
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+.AF2{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.AF3{
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.AF4{
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .white-text{
@@ -113,5 +187,3 @@ test2{
     background-color: rgb(245, 120, 120); 
     color: white;
 }
-
-
