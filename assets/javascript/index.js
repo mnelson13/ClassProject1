@@ -27,13 +27,10 @@ $(document).ready(function () {
             url: "https://api.unsplash.com/search/photos/?client_id=9d96977ed5858506ff94a1abca2aa5ad570e2cbd63431c8caa986e5a8865dd80&orientation=landscape&query=" + place,
             method: "GET",
         }).then(function (response) {
-            console.log(response)
             let img = response.results[slideNumber].urls.regular;
             let classNumber = slideNumber + 1;
             let className = '.' + continent + classNumber;
             let idName = '#' + continent + "Slide" + classNumber;
-            console.log(className);
-            console.log(place);
             $(idName).text(place);
             $(className).css('background-image', 'url(' + img + ')');
         })
@@ -83,10 +80,12 @@ $(document).ready(function () {
 
     $("#searchIndex").keypress(function (e) {
         searchValue = $("#searchIndex").val();
-        // localStorage.clear();
-        localStorage.setItem("searchValue", searchValue);
         var key = e.which;
         if (key === 13) {
+            searchValue = searchValue.replace(/[^a-zA-Z]+/g, "");
+            searchValue = searchValue.trim();
+            console.log(searchValue);
+            localStorage.setItem("searchValue", searchValue);
             window.open("results.html");
         }
     })

@@ -132,6 +132,8 @@ $(document).ready(function(){
         searchValue = $("#searchResults").val();
         var key = e.which;
         if (key === 13) {
+            searchValue = searchValue.replace(/[^a-zA-Z]+/g, "");
+            searchValue = searchValue.trim();
             showResults(searchValue);
         }
 
