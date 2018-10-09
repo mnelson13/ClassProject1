@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     $("#searchIndex").keypress(function(e){
         searchValue = $("#searchIndex").val();
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         var key = e.which;
         if (key === 13) {

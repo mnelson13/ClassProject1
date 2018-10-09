@@ -10,6 +10,7 @@ $(document).ready(function(){
     let favorites = []
     if (localStorage.getItem("favorites")) {
         favorites.push(localStorage.getItem("favorites"));
+         favorites = JSON.parse(favorites);
     };
 
 
@@ -68,12 +69,16 @@ $(document).ready(function(){
                     imgDiv.attr("class", "col s3")
 
                     if (result.thumbnail_url !== null) {
-                        imgDiv.append('<img class="test" src="' + result.thumbnail_url + '" />')
+                        imgDiv.append('<img class="test responsive-img" src="' + result.thumbnail_url + '" />')
                     } else if (result.thumbnail_url === null) {
-                        imgDiv.append('<img class="test" src="assets/images/sorry-image-not-available.jpg" />')
+                        imgDiv.append('<img class="test responsive-img" src="assets/images/sorry-image-not-available.jpg" />')
                     };
 
-                    imgDiv.append('<i data-id=' + result.id + ' class="material-icons notSelected">favorite_border</i>');
+                    if (favorites.indexOf(result.id) === -1) {
+                        imgDiv.append('<i data-id=' + result.id + ' class="material-icons notSelected">favorite_border</i>');
+                    } else {
+                        imgDiv.append('<i data-id=' + result.id + ' class="material-icons selected">favorite</i>');
+                    }
 
                     if (result.original_name !== null) {
                         travelDiv.append('<h3 class="card-title">'+ result.original_name + '</h3>');
@@ -116,6 +121,11 @@ $(document).ready(function(){
     }
 
     $("#searchResults").keypress(function(e){
+        favorites = []
+        if (localStorage.getItem("favorites")) {
+            favorites.push(localStorage.getItem("favorites"));
+            favorites = JSON.parse(favorites);
+        };
         $("#b1").empty();
         offset = 0;
         searchValue = $("#searchResults").val();
@@ -143,11 +153,24 @@ $(document).ready(function(){
         $(this).text("favorite");
         $(this).removeClass("notSelected");
         $(this).addClass("selected");
-        favorites.push($(this).attr("data-id"));
+        favorites.unshift($(this).attr("data-id"));
         let favoritesString = JSON.stringify(favorites)
         localStorage.setItem("favorites", favoritesString);
 
-        console.log(favorites);
+        // console.log(favorites);
+        
+    });
+
+    $(document.body).on("click", ".selected", function(){
+        $(this).text("favorite_border");
+        $(this).removeClass("selected");
+        $(this).addClass("notSelected");
+        let index = favorites.indexOf($(this).attr("data-id"));
+        favorites.splice(index, 1);
+        let favoritesString = JSON.stringify(favorites)
+        localStorage.setItem("favorites", favoritesString);
+
+        // console.log(favorites);
         
     });
 
