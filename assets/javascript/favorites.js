@@ -134,10 +134,11 @@ $(document).ready(function(){
 
     $("#searchResults").keypress(function (e) {
         searchValue = $("#searchResults").val();
-        // localStorage.clear();
-        localStorage.setItem("searchValue", searchValue);
         var key = e.which;
         if (key === 13) {
+            searchValue = searchValue.replace(/[^a-zA-Z]+/g, "");
+            searchValue = searchValue.trim();
+            localStorage.setItem("searchValue", searchValue);
             window.open("results.html");
 
 
