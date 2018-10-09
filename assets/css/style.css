@@ -1,14 +1,50 @@
+.mainBod{
+    /*background-color: #ef9a9a;*/
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/117/431/large_2x/color-abstract-wave-vector-background.jpg");
+    }
 
-#b1{
-    background-color:blue;
+
+.nav-wrapper{
+    float: right;
+    width: 75%;
+    position: fixed;
+  
+    
+}
+.nav-wrapper2{
+    position: fixed;
+}
+
+.btn {
+    background-color: DodgerBlue; 
+    border: none; 
+    /*padding: 12px 16px; */
+    font-size: 16px; 
+    cursor: pointer; 
+    position: fixed;
+    position: relative;
+    
+}
+
+.nav-wrapper2{
+    position: fixed;
+}
+
+
+
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
 }
 
 
 #mainContent{
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
     align-content: center;
+    
 }
 .resultcard{
     width: 100%;
@@ -16,18 +52,26 @@
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
+    
+    background-color: whitesmoke;
 }
+
 test2{
     width: 100%;
 }
+
 .test {
     width:200px;
     height:200px;
-    margin: 10px;
+    margin: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 30px;
+    background: #fd5b39;
+    
+    padding: 5px; 
 }
 .NA1{
     background-repeat: no-repeat;
@@ -74,6 +118,7 @@ test2{
     background-size: 100%;
 
 }
+
 .SA2{
     background-size: 100%;
     background-repeat: no-repeat;

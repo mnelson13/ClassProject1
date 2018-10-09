@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     function getCarouselPictures(slideNumber, place, continent) {
         $.ajax({
-            url: "https://api.unsplash.com/search/photos/?client_id=04c7a0063efeefd512c2ff065cd1073e801dc7c731ce124a88fb157fc2b92fff&orientation=landscape&query=" + place,
+            url: "https://api.unsplash.com/search/photos/?client_id=9d96977ed5858506ff94a1abca2aa5ad570e2cbd63431c8caa986e5a8865dd80&orientation=landscape&query=" + place,
             method: "GET",
         }).then(function (response) {
             console.log(response)
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
     $("#searchIndex").keypress(function (e) {
         searchValue = $("#searchIndex").val();
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         var key = e.which;
         if (key === 13) {

@@ -12,9 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
-<body>
+<body class="mainBod">
 
     <!-- <nav>
         <div class="nav-wrapper">
@@ -26,22 +29,31 @@
             </ul>
         </div>
     </nav> -->
-
+    <div class="container">
     <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper" >
           <form>
+           <!--     <i class="material-icons">search</i>         <button class="btn"><i class="fa fa-home"></i> Home</button>-->
             <div class="input-field">
               <input placeholder="Tourist Express Search" id="searchResults" type="search" required>
-              <label class="label-icon" for="searchResults"><i class="material-icons">search</i></label>
+             <label class="label-icon" for="searchResults"><i class="material-icons">search</i></label>
+             <label class="label-icon" for="searchResults"></label>
               <i class="material-icons">close</i>
             </div>
           </form>
         </div>
+
+        <div class="nav-wrapper2">
+         <a href="index.html">  <button class="btn"><i class="fa fa-home"></i> Home</button></a>
+            
+         <a href="favorites.html" target="_blank"><button class="btn"><i class="fa fa-heart"></i>Favorites</button></a>
+
+        </div>
       </nav>
    
     <div id="mainContent">
-        <div class="row">
-            <div id="b1" class="col l12">
+        <div id="b1" class="row">
+            
                 <!-- Note that "m4 l3" was added -->
             
                 <!-- <div id="resultcard" class="card horizontal">
@@ -76,7 +88,7 @@
                     </div>
 
                 </div> -->
-            </div>
+            
             
         </div>
 
@@ -97,7 +109,7 @@
                 <i class="material-icons right">send</i>
             </button>
         </div>
-
+    </div>
 
             <script src="https://code.jquery.com/jquery.js"></script>
             <script type="text/javascript" src="assets/javascript/app.js"></script>
