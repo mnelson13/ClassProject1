@@ -1,4 +1,8 @@
 $(document).ready(function(){
+
+    
+    $('.sidenav').sidenav();
+      
     
 
     $("#loadMore").hide();
@@ -16,7 +20,7 @@ $(document).ready(function(){
 
     function showResults(searchValue) {
         event.preventDefault();
-        $("#loadMore").show();
+        // $("#loadMore").show();
         let queryURL = "https://api.sygictravelapi.com/1.1/en/places/list?query="+searchValue+"&level=poi&limit=10&categories_not=traveling&offset=" + offset + "";
         console.log(searchValue);
         $.ajax({
@@ -114,10 +118,14 @@ $(document).ready(function(){
                     
 
                 }
+
+
             )
 
-        })
+            
 
+        })
+        $("#loadMore").show();
         localStorage.setItem("searchValue", "");
     }
 

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('.sidenav').sidenav();
+
     let APIKeyWeather = "df51c21d9a4ddc2a75c5f87f7600ed95";
     let apikeySygic = "KpeNRgekRLJeDOc0Yg1D91Gv5VK3EnU3EqRxSykg";
     // let favorites = [localStorage.getItem("favorites")];
@@ -140,9 +142,8 @@ $(document).ready(function(){
             searchValue = searchValue.trim();
             localStorage.setItem("searchValue", searchValue);
             window.open("results.html");
-
-
         }
+        $("#searchResults").val('');
     })
 
 });

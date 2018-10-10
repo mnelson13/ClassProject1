@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('.sidenav').sidenav();
+
     let apikeySygic = "KpeNRgekRLJeDOc0Yg1D91Gv5VK3EnU3EqRxSykg";
 
     //CAROUSEL
