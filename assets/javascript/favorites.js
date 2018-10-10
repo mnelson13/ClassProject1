@@ -142,8 +142,9 @@ $(document).ready(function(){
             searchValue = searchValue.trim();
             localStorage.setItem("searchValue", searchValue);
             window.open("results.html");
+             $("#searchResults").val('');
         }
-        $("#searchResults").val('');
+       
     })
 
 });
