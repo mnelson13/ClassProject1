@@ -18,30 +18,38 @@
 <body class="mainBod">
     <div id="main" class="container">
         
+
         <nav>
-         <div class="nav-wrapper" >
-          <form>
-             <!--     <i class="material-icons">search</i>         <button class="btn"><i class="fa fa-home"></i> Home</button>-->
-             <div class="input-field">
-                 <input placeholder="Tourist Express Search" id="searchResults" type="search" required>
-                    <label class="label-icon" for="searchResults"><i class="material-icons">search</i></label>
-                     <label class="label-icon" for="searchResults"></label>
-                      <i class="material-icons">close</i>
-                        </div>
-                     </form>
-                     </div>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light btn" href="index.html">Home<i class="material-icons left">home</i></a></li>
+                    <!-- <li><a class="waves-effect waves-light btn" href="favorites.html" target="_blank">Favorites<i class="material-icons left">favorite</i></a></li> -->
+                </ul>
                 
-                     <div class="nav-wrapper2">
-                     <a href="index.html">  <button class="btn"><i class="fa fa-home"></i> Home</button></a>
-                     <a href="favorites.html"><button class="btn"><i class="fa fa-heart"></i>Favorites</button></a>
-                
-                 </div>
-                </nav>
+                <form>
+                    <div class="input-field nav3">
+                        <input id="searchResults" placeholder="Tourist Express Search" type="search" required>
+                        <label class="label-icon" for="searchResults"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+            
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="favorites.html" target="_blank">Favorites</a></li> -->
+        </ul>
 
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/javascript/favorites.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
