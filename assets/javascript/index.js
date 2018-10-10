@@ -93,31 +93,31 @@ $(document).ready(function () {
     })
     $("#parisBtn").click(function (e) {
         searchValue = "Paris";
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         window.open("results.html");
     })
     $("#hollywoodBtn").click(function (e) {
         searchValue = "Hollywood";
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         window.open("results.html");
     })
     $("#rdjBtn").click(function (e) {
         searchValue = "Rio de Janeiro";
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         window.open("results.html");
     })
     $("#hongKongBtn").click(function (e) {
         searchValue = "Hong Kong";
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         window.open("results.html");
     })
     $("#dubaiBtn").click(function (e) {
         searchValue = "Dubai";
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("searchValue", searchValue);
         window.open("results.html");
     })
