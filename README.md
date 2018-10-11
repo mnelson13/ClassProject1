@@ -13,3 +13,11 @@
 
 ### Languages/Technologies Used:
 * HTML, CSS, Materialize, JavaScript, jQuery, local storage, API requests
+
+
+### Group Members
+* Melissa Nelson
+* Zack Cozine
+* Yuval Ashkenazi
+* Deeno Shamsul-Bahri
+* Richard Mcdonnell Anderson
