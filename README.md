@@ -10,6 +10,7 @@
 * You can pick your favorites to add to your favorites page be clicking the little favorites heart for that result
 * You can also remove your favorites by clicking the favorites heart again
 
+![](assets/images/screenshot.gif)
 
 ### Languages/Technologies Used:
 * HTML, CSS, Materialize, JavaScript, jQuery, local storage, API requests
